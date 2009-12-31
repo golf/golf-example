@@ -17,7 +17,7 @@
       query: null                             // [string]   optional search query
     };
 
-    $.fn.extend({
+    $.extend($.fn, {
       linkUrl: function() {
         var returning = [];
         var regexp = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
