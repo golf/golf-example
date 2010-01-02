@@ -24,7 +24,7 @@ $.golf.controller = [
 
   { route: ".*",
     action: function(b,match) {
-      b.empty().append(new Component.Example(data));
+      b.empty().append(new Component.TableExample(data));
     }
   }
 
