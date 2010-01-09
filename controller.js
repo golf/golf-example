@@ -18,14 +18,16 @@ var data = [
   ]
 ];
 
-$.golf.defaultRoute = "/test/";
+$.golf.defaultRoute = "/test/home/";
 
 $.golf.controller = [
 
-  { route: ".*",
-    action: function(b,match) {
-      b.empty().append(new Component.TableExample(data));
+  { splat_route: "/test/*/",
+    action: function(container, params) {
+      container.empty().append(new Component.TableExample(data));
     }
   }
 
 ];
+
+$.require("splat_routes");
