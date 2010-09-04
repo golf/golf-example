@@ -1,6 +1,4 @@
-(function() {
-
-  var base = "routes";
+(function(base) {
 
   for (var i in $.golf.plugins)
     if (i.substr(0, base.length+1) == base+"/")
@@ -9,4 +7,4 @@
         $.golf.controller.unshift(v);
       });
 
-})()
+})("routes")
